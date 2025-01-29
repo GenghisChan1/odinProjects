@@ -25,12 +25,16 @@ mymovie.prototype.addtocollection = function(){
 
 mymovie.prototype.displaycontent = function(){
   const table = document.getElementById("table");
-  table.innerHTML = "";
+  while (table.rows.length > 1) {
+    table.deleteRow(1);
+  }
 
   movie.forEach((movies, index) => {
     const newrow = document.createElement("tr");
     const newtitle = document.createElement("td");
     const newscore = document.createElement("td");
+    const newdatastatus = document.createElement("td");
+    const newdatabtn = document.createElement("td");
     const newstatus = document.createElement("button");
     const newbtn = document.createElement("button");
 
@@ -49,8 +53,10 @@ mymovie.prototype.displaycontent = function(){
     
     newrow.appendChild(newtitle);
     newrow.appendChild(newscore);
-    newrow.appendChild(newstatus);
-    newrow.appendChild(newbtn);
+    newrow.appendChild(newdatastatus);
+    newrow.appendChild(newdatabtn);
+    newdatastatus.appendChild(newstatus);
+    newdatabtn.appendChild(newbtn);
     table.appendChild(newrow);
 
     console.log(movie.title + " " + movie.score);
