@@ -6,11 +6,6 @@ for (let i = 0; i <= 8; i++) {
   container.appendChild(cell);
 }
 
-const cells = document.querySelectorAll('.cell');
-cells.forEach(cell => {
-  cell.textContent = 'x';
-});
-
 function ox(event) {
   let cell = event.target;
   cell.textContent = "o";
