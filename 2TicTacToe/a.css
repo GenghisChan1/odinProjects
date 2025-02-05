@@ -1,0 +1,31 @@
+body{
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+#container{
+  display:grid;
+  grid-template-columns: repeat(3,auto);
+  grid-template-rows: repeat(3,auto);
+  grid-gap: 0px;
+  width: 400px;
+  height: 400px;
+  padding: 25px;
+}
+
+.cell{
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
